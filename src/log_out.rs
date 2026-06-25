@@ -3,8 +3,8 @@ use crate::models::app_state::AppState;
 use axum::extract::State;
 use axum::{Json, response::IntoResponse};
 use chrono::Utc;
-use serde_json::to_vec;
 use devcord_events::events::auth::UserLoggedOut;
+use serde_json::to_vec;
 use tracing::error;
 
 pub async fn log_user_out(State(state): State<AppState>, user_id: String) -> impl IntoResponse {
