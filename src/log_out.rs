@@ -4,7 +4,7 @@ use axum::extract::State;
 use axum::{Json, response::IntoResponse};
 use chrono::Utc;
 use serde_json::to_vec;
-use topic_structs::UserLoggedOut;
+use devcord_events::events::auth::UserLoggedOut;
 use tracing::error;
 
 pub async fn log_user_out(State(state): State<AppState>, user_id: String) -> impl IntoResponse {

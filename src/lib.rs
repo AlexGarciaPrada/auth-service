@@ -7,3 +7,4 @@ pub mod models;
 pub mod register;
 pub mod sign_in;
 pub mod tests;
+pub mod health;
